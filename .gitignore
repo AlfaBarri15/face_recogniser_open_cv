@@ -1,0 +1,16 @@
+#ignore old files
+old_files/
+
+# ignore doxygen generated files
+doc/
+
+#ignore build files
+build/
+
+#ignore picture taken
+pictures/
+
+#ignore vscode settings file
+.vscode/
+
+

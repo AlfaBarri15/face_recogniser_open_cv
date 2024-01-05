@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 2.8.12)
+project(Projet)
+add_executable(client main.cpp client.h client.cpp FaceDetector.h FaceDetector.cpp)
+
+find_package(OpenCV REQUIRED)
+if(OpenCV_FOUND)
+	include_directories(${OpenCV_INCLUDE_DIRS})
+	target_link_libraries(client ${OpenCV_LIBRARIES})
+else(OpenCV_FOUND)
+	message(FATAL ERROR "Librarie OpenCV introuvable!")
+endif(OpenCV_FOUND)
